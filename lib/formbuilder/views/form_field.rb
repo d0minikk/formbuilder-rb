@@ -38,7 +38,7 @@ module Formbuilder
 
       def render_description
         span(class: 'help-block') {
-          text simple_format(@response_field[:field_options]["description"])
+          text @response_field[:field_options]["description"]
         }
       end
 
