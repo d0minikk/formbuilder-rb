@@ -54,9 +54,9 @@ module Formbuilder
             text "Less than #{@response_field.maxlength} #{@response_field.min_max_length_units}."
           end
 
-          text ' Current count: '
-          code.min_max_counter
-          text " #{@response_field.min_max_length_units}."
+          #text ' Current count: '
+          #code.min_max_counter
+          #text " #{@response_field.min_max_length_units}."
         }
       end
 
