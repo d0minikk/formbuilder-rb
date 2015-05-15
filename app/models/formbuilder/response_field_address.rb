@@ -18,26 +18,26 @@ module Formbuilder
       """
         <div class='input-line'>
           <span class='street'>
-            <input type'text' name='response_fields[#{self[:id]}][street]' id='response_fields_#{self[:id]}' class='#{'required' if self.required?}' value='#{value['street']}' />
+            <input type'text' name='response_fields[#{self[:id]}][street]' id='response_fields_#{self[:id]}' class='#{'required' if self.required?}' value='#{value['street'] if value && value['street']}' />
             <label>Address</label>
           </span>
         </div>
 
         <div class='input-line'>
           <span class='city'>
-            <input type'text' name='response_fields[#{self[:id]}][city]' class='#{'required' if self.required?}' value='#{value['city']}' />
+            <input type'text' name='response_fields[#{self[:id]}][city]' class='#{'required' if self.required?}' value='#{value['city'] if value && value['city']}' />
             <label>City</label>
           </span>
 
           <span class='state'>
-            <input type'text' name='response_fields[#{self[:id]}][state]' class='#{'required' if self.required?}' value='#{value['state']}' />
+            <input type'text' name='response_fields[#{self[:id]}][state]' class='#{'required' if self.required?}' value='#{value['state'] if value && value['state']}' />
             <label>State / Province / Region</label>
           </span>
         </div>
 
         <div class='input-line'>
           <span class='zip'>
-            <input type'text' name='response_fields[#{self[:id]}][zipcode]' class='#{'required' if self.required?}' value='#{value['zipcode']}' />
+            <input type'text' name='response_fields[#{self[:id]}][zipcode]' class='#{'required' if self.required?}' value='#{value['zipcode'] if value && value['zipcode']}' />
             <label>Zipcode</label>
           </span>
 
