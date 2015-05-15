@@ -21,7 +21,7 @@ module Formbuilder
     def render_input(value, opts = {})
       """
         <span class='existing-filename'>#{get_attachments(value).first.try(:upload).try(:raw_filename)}</span>
-        <input type='file' name='response_fields[#{self[:id]}][]' id='response_fields_#{self[:id]}' />
+        <input type='file' name='response_fields[#{self[:id]}][]' id='response_fields_#{self[:id]}' class='#{'required' if self.required?}' />
       """
     end
 

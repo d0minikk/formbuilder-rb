@@ -16,7 +16,7 @@ module Formbuilder
           <span class='above-line'>$</span>
 
           <span class='dollars'>
-            <input type='text' name='response_fields[#{self[:id]}][dollars]' id='response_fields_#{self[:id]}' value='#{value['dollars']}' />
+            <input type='text' name='response_fields[#{self[:id]}][dollars]' id='response_fields_#{self[:id]}' class='#{'required' if self.required?}' value='#{value['dollars']}' />
             <label>Dollars</label>
           </span>
       """
@@ -26,7 +26,7 @@ module Formbuilder
           <span class='above-line'>.</span>
 
           <span class='cents'>
-            <input type='text' name='response_fields[#{self[:id]}][cents]' value='#{value['cents']}' maxlength='2' />
+            <input type='text' name='response_fields[#{self[:id]}][cents]' value='#{value['cents']}' class='#{'required' if self.required?}' maxlength='2' />
             <label>Cents</label>
           </span>
         """

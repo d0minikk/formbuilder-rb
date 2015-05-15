@@ -14,14 +14,14 @@ module Formbuilder
       str = """
         <div class='input-line'>
           <span class='hours'>
-            <input type='text' name='response_fields[#{self[:id]}][hours]' id='response_fields_#{self[:id]}' value='#{value['hours']}' maxlength='2' />
+            <input type='text' name='response_fields[#{self[:id]}][hours]' id='response_fields_#{self[:id]}' value='#{value['hours']}' class='#{'required' if self.required?}' maxlength='2' />
             <label>HH</label>
           </span>
 
           <span class='above-line'>:</span>
 
           <span class='minutes'>
-            <input type='text' name='response_fields[#{self[:id]}][minutes]' value='#{value['minutes']}' maxlength='2' />
+            <input type='text' name='response_fields[#{self[:id]}][minutes]' value='#{value['minutes']}' class='#{'required' if self.required?}' maxlength='2' />
             <label>MM</label>
           </span>
       """
@@ -32,7 +32,7 @@ module Formbuilder
           <span class='above-line'>:</span>
 
           <span class='seconds'>
-            <input type='text' name='response_fields[#{self[:id]}][seconds]' value='#{value['seconds']}' maxlength='2' />
+            <input type='text' name='response_fields[#{self[:id]}][seconds]' value='#{value['seconds']}' class='#{'required' if self.required?}' maxlength='2' />
             <label>SS</label>
           </span>
         """
@@ -40,7 +40,7 @@ module Formbuilder
 
       str += """
           <span class='am_pm'>
-            <select name='response_fields[#{self[:id]}][am_pm]'>
+            <select name='response_fields[#{self[:id]}][am_pm]' class='#{'required' if self.required?}'>
               <option value='AM' #{value['am_pm'] == "AM" ? 'selected' : ''}>AM</option>
               <option value='PM' #{value['am_pm'] == "PM" ? 'selected' : ''}>PM</option>
             </select>

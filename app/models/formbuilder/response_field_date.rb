@@ -12,21 +12,21 @@ module Formbuilder
       """
         <div class='input-line'>
           <span class='month'>
-            <input type='text' name='response_fields[#{self[:id]}][month]' value='#{value['month']}' id='response_fields_#{self[:id]}' maxlength='2' />
+            <input type='text' class='#{'required' if self.required?}' name='response_fields[#{self[:id]}][month]' value='#{value['month']}' id='response_fields_#{self[:id]}' maxlength='2' />
             <label>MM</label>
           </span>
 
           <span class='above-line'>/</span>
 
           <span class='day'>
-            <input type='text' name='response_fields[#{self[:id]}][day]' value='#{value['day']}' maxlength='2' />
+            <input type='text' class='#{'required' if self.required?}' name='response_fields[#{self[:id]}][day]' value='#{value['day']}' maxlength='2' />
             <label>DD</label>
           </span>
 
           <span class='above-line'>/</span>
 
           <span class='year'>
-            <input type='text' name='response_fields[#{self[:id]}][year]' value='#{value['year']}' maxlength='4' />
+            <input type='text' class='#{'required' if self.required?}' name='response_fields[#{self[:id]}][year]' value='#{value['year']}' maxlength='4' />
             <label>YYYY</label>
           </span>
         </div>
