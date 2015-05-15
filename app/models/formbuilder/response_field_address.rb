@@ -8,7 +8,12 @@ module Formbuilder
     }
 
     def render_input(value, opts = {})
-      selected_country = (value['country'] || 'US').to_sym
+      selected_country = if value && value['country']
+        value['country']
+      else
+        'US'
+      end
+      selected_country = selected_country.to_sym
 
       """
         <div class='input-line'>
