@@ -54,6 +54,7 @@ module Formbuilder
       end
 
       private
+
       def render_fields
         @form.response_fields_for_page(@current_page).each do |response_field|
           widget Formbuilder::Views::FormField.new(response_field: response_field, entry: @entry)

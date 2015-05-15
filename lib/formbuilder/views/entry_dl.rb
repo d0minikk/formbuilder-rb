@@ -30,6 +30,7 @@ module Formbuilder
       end
 
       private
+
       def blind_label
         text ' '
         span.label 'Blind'

@@ -19,6 +19,7 @@ module Formbuilder
       end
 
       private
+
       def render_label
         label(for: "response_fields_#{@response_field.id}") {
           text @response_field[:label]
