@@ -13,7 +13,7 @@ module Formbuilder
           div.clear
           render_min_max_lengths
           render_min_max
-          render_error if @response_field.input_field && @entry.error_for(@response_field)
+          render_error if @entry && @entry.error_for(@response_field)
           render_description if @response_field.input_field && @response_field[:field_options]["description"].present?
         }
       end
